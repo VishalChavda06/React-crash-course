@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 const MoreInfo=()=>{
 
     // variable in jsx
@@ -32,6 +33,7 @@ const MoreInfo=()=>{
     const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"]
     return(
         <>
+        <button style={{marginTop: "10px"}}> <Link to="/">Back to 🔙</Link></button>
         <h1>Jsx More Information</h1>
 
         <p>User varialble with jsx</p>
