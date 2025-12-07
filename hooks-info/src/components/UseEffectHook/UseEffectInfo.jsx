@@ -58,10 +58,10 @@ const UseEffectInfo=()=>{
         
 
         <div>
-            <button onClick={()=> setCount(count +1)} className="bg-purple-500 p-2 m-2 text-white p-2 rounded-md">
+            <button onClick={()=> setCount(count +1)} className="bg-purple-500 p-2 m-2 text-white rounded-md">
                 Increment Number : {count}
             </button>
-            <button onClick={()=> setData(data +1)} className="bg-purple-500 p-2 m-2 text-white p-2 rounded-md">
+            <button onClick={()=> setData(data +1)} className="bg-purple-500 p-2 m-2 text-white  rounded-md">
                 Increment Data : {data}
             </button>
         </div>
