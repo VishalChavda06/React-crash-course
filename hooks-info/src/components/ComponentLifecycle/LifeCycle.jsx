@@ -1,4 +1,5 @@
-import { use, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const LifeCycle = () => {
 
@@ -23,6 +24,9 @@ const LifeCycle = () => {
     }, [])
     return (
         <>
+        <div className="flex justify-start mb-4 relative">
+        <Link to="/" className="cursor-pointer absolute top-[-10px] left-1/4 ">Back 🔙</Link>
+        </div>
             {display && <h1 className="text-2xl font-bold mt-10">
                 <h1>Life Cycle</h1>
                 Count is : {count}</h1>}

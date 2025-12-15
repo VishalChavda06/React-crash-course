@@ -7,12 +7,17 @@ const DyanamicCondition=()=>{
         padding:'10px',
         width:'420px',
         height:'100%',
-        transition:'all 0.6s ease-in-out',
+        transition:'all 0.9s ease-in-out',
     })
 
-    const imgHandler=(bgColor , width)=>{
+    const [textColor , setTextColor] = useState('white')
+    const [buttonColor , setButtonColor] = useState('black')
+
+    const imgHandler=(bgColor , width , textColor , buttonColor)=>{
       console.log(bgColor , width);
       setImg({...img, backgroundColor:bgColor, width:width});
+      setTextColor(textColor);
+      setButtonColor(buttonColor);
     }
     
 
@@ -26,9 +31,9 @@ const DyanamicCondition=()=>{
             <div>
                 <img src="https://cdn-icons-png.freepik.com/512/219/219988.png" alt="" style={img} />
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-                    <button onClick={()=>imgHandler('red' , '420px')}>Normal image</button> 
-                    <button onClick={()=>imgHandler('blue' , '480px')}>Change image</button>
+                    <p style={{color: textColor}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    <button onClick={()=>imgHandler('black' , '400px' , 'green' , 'red')} style={{backgroundColor: buttonColor}} >Normal image</button> 
+                    <button onClick={()=>imgHandler('white' , '450px' , 'yellow' , 'green')} style={{backgroundColor: buttonColor}}>Change image</button>
                 </div>
                 </div>  
             </div>
