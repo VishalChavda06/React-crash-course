@@ -4,6 +4,7 @@ import UserInfo from './components/UserInfo'
 import './App.css'
 import BasicInfo from './components/BasicInfo'
 import ProductInfo from './components/Products/ProductInfo'
+import SellerCard from './components/Project/SellerCard'
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         <button className="bg-blue-500 text-white px-4 py-2 rounded-md mx-3 hover:bg-blue-600">
           <Link to="/productinfo">Product Info</Link>
         </button>
+        <button className="bg-blue-500 text-white px-4 py-2 rounded-md mx-3 hover:bg-blue-600">
+          <Link to="/sellercard">Seller Card</Link>
+        </button>
       </div>
 
       <div>
@@ -26,6 +30,7 @@ function App() {
           <Route path="/usercard" element={<UserInfo />} />
           <Route path="/basicinfo" element={<BasicInfo />} />
           <Route path="/productinfo" element={<ProductInfo />} />
+          <Route path="/sellercard" element={<SellerCard />} />
         </Routes>
       </div>
     </>
