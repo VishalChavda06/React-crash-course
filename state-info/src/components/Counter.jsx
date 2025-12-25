@@ -1,32 +1,18 @@
-import { useState } from "react";
+import React from 'react'
+import { useState } from 'react'
 
 const Counter = () => {
 
     const [count, setCount] = useState(0)
-
-    const handleIncrement = () => {
-        setCount(count + 1)
-    }
-
-    const handleDecrement = () => {
-        setCount(count - 1)
-    }
-
-    const handleReset = () => {
-        setCount(0)
-    }
-
     return (
-        <>
-            {/* Number Increment & Decrement */}
-            <h3>Number Increment & Decrement</h3>
+        <div>
+            <h1>Counter Component</h1>
             <h3>Count :{count}</h3>
-            <button onClick={handleIncrement}>Increment</button>
-            <button onClick={handleDecrement}>Decrement</button>
-            <button onClick={handleReset}>Reset</button>
-        </>
+            <button onClick={() => setCount(count + 1)}>Increment Number</button>
+            <button onClick={() => setCount(count - 1)}>Decrement Number</button>
+            <button onClick={() => setCount(count + 5)}>Jump by 5</button>
+        </div>
     )
-
 }
 
-export default Counter;
+export default Counter
