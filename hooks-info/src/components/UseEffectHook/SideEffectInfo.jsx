@@ -56,7 +56,7 @@ const SideEffectInfo=()=>{
         <div>
             <input type="text" value={name} onChange={(e)=> setName(e.target.value)} className="border-2 border-gray-300 p-2 rounded-md" placeholder="Enter your name" />
             <p className="text-lg font-bold mt-2">Name : {name}</p>
-            <button onClick={()=> setCount(count +1)} className="bg-purple-500 p-2 m-2 text-white p-2 rounded-md">
+            <button onClick={()=> setCount(count +1)} className="bg-purple-500 p-2 m-2 text-white rounded-md">
                 Increment Number : {count}
             </button>
             
