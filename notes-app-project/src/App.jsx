@@ -36,7 +36,7 @@ const App = () => {
   }
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden'>
+    <div className='min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>
         <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse'></div>
@@ -48,7 +48,7 @@ const App = () => {
           {/* Header Section */}
           <div className='text-center mb-10 sm:mb-12'>
             <div className='inline-block mb-4'>
-              <h1 className='text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 bg-gradient-to-r from-white via-purple-200 to-white text-transparent bg-clip-text'>
+              <h1 className='text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 bg-linear-to-r from-white via-purple-200 to-white text-transparent bg-clip-text'>
                 📝 Notes App
               </h1>
             </div>
@@ -61,7 +61,7 @@ const App = () => {
           {/* Form Section */}
           <div className='bg-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-white/20 hover:border-white/30 transition-all duration-300'>
             <div className='flex items-center gap-3 mb-6'>
-              <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/30 to-blue-500/30 flex items-center justify-center text-2xl'>
+              <div className='w-12 h-12 rounded-xl bg-linear-to-br from-purple-500/30 to-blue-500/30 flex items-center justify-center text-2xl'>
                 ✍️
               </div>
               <h2 className='text-2xl sm:text-3xl font-bold text-white'>Add New Note</h2>
@@ -98,7 +98,7 @@ const App = () => {
 
               <button
                 type="submit"
-                className='w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold px-6 py-4 rounded-xl transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2 text-lg'
+                className='w-full bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold px-6 py-4 rounded-xl transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2 text-lg'
               >
                 <span>Add Note</span>
                 <span className='text-xl'>🗒️</span>
@@ -110,14 +110,14 @@ const App = () => {
           <div className='bg-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-white/20 hover:border-white/30 transition-all duration-300'>
             <div className='flex items-center justify-between mb-6'>
               <div className='flex items-center gap-3'>
-                <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-2xl'>
+                <div className='w-12 h-12 rounded-xl bg-linear-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-2xl'>
                   📋
                 </div>
                 <h2 className='text-2xl sm:text-3xl font-bold text-white'>
                   Your Notes
                 </h2>
               </div>
-              <span className='bg-gradient-to-r from-purple-500/30 to-blue-500/30 text-white px-4 py-2 rounded-full text-sm font-bold border border-white/20'>
+              <span className='bg-linear-to-r from-purple-500/30 to-blue-500/30 text-white px-4 py-2 rounded-full text-sm font-bold border border-white/20'>
                 {tasks.length} {tasks.length === 1 ? 'Note' : 'Notes'}
               </span>
             </div>
@@ -134,7 +134,7 @@ const App = () => {
                   {tasks.map((task) => (
                     <div
                       key={task.id}
-                      className='group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 hover:scale-[1.02]'
+                      className='group relative bg-linear-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 hover:scale-[1.02]'
                     >
                       {/* Delete Button */}
                       <button
