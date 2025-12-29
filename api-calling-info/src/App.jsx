@@ -1,47 +1,52 @@
 import React from 'react'
-import { useState } from 'react'
+import BasicFetch from './components/BasicFetch'
+import LoadingErrorStates from './components/LoadingErrorStates'
+import PostRequest from './components/PostRequest'
+import UseEffectFetch from './components/UseEffectFetch'
+import SearchFilter from './components/SearchFilter'
+import MultipleAPIs from './components/MultipleAPIs'
+import PromiseThen from './components/PromiseThen'
 
 const App = () => {
-
-  const [data, setData] = useState([])
-
-  const productData = async () => {
-    let response = await fetch("https://dummyjson.com/products")
-    let dataPro = await response.json()
-    setData(dataPro.products)
-  }
   return (
-    <>
-      <div className='p-10'>
-        <h1 className='text-3xl font-bold text-center'>
-          API calling Info
-        </h1>
-        <button onClick={productData} className='bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer' >Get Data</button>
-      </div>
+    <div className='min-h-screen bg-linear-to-br from-gray-100 to-gray-200 py-8 px-4'>
+      <div className='max-w-7xl mx-auto'>
+        {/* Header */}
+        <div className='text-center mb-8'>
+          <h1 className='text-4xl md:text-5xl font-bold text-gray-800 mb-3'>
+            🌐 API Calling Examples
+          </h1>
+          <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+            Comprehensive examples of different API calling patterns in React
+          </p>
+        </div>
 
-      {/* Product List */}
-      <div className='flex flex-wrap gap-10 px-10 py-4'>
-        {data.length > 0 && data.map((elem, index) => {
-          return (
-            <div key={index} className='border-2 border-gray-300 p-4 w-[300px] rounded-md'>
-              <div>
-              <h1 className='text-medium text-center font-bold text-black'>{elem.title}</h1>
-              <img src={elem.thumbnail} alt={elem.title} />
-              </div>
-              <div className='flex flex-col gap-2'>
-                <p className='text-sm text-gray-500'>{elem.description}</p>
-                <p className='text-sm text-black font-bold'> Price : {elem.price}</p>
-                <p className='text-sm text-gray-500'> Rating : {elem.rating}</p>
-                <p className='text-sm text-gray-500'> Stock : {elem.stock}</p>
-                <p className='text-sm text-gray-500'> Brand : {elem.brand}</p>
-                <p className='text-sm text-gray-500'> Category : {elem.category}</p>  
-              </div>
-            </div>
-          )
-        })}
-      </div>
-    </>
+        {/* Examples Grid */}
+        <div className='space-y-8'>
+          <BasicFetch />
+          <LoadingErrorStates />
+          <PostRequest />
+          <UseEffectFetch />
+          <SearchFilter />
+          <MultipleAPIs />
+          <PromiseThen />
+        </div>
 
+        {/* Footer Info */}
+        <div className='mt-12 p-6 bg-blue-50 rounded-lg border border-blue-200'>
+          <h3 className='text-xl font-bold text-blue-800 mb-3'>📚 Key Concepts Covered:</h3>
+          <ul className='grid md:grid-cols-2 gap-2 text-gray-700'>
+            <li>✅ Basic GET requests with async/await</li>
+            <li>✅ Loading states and error handling</li>
+            <li>✅ POST requests with form data</li>
+            <li>✅ useEffect for automatic data fetching</li>
+            <li>✅ Search and filter functionality</li>
+            <li>✅ Multiple API calls (sequential & parallel)</li>
+            <li>✅ Promise.then() pattern alternative</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   )
 }
 
